@@ -5,15 +5,20 @@
 using namespace std;
 
 int main(){
-    long int numero, i = 0, n1 = 1, n2 = 1, newFib, coluna = 0;
+    long int numero, i = 0, n1 = 1, n2 = 1, newFib, coluna = 2;
 
     cout << "Entre com um numero: ";
     cin >> numero;
-    cout << "1 1 ";
-
+    cout.width(15);
+    cout << n1; 
+    cout.width(15);
+    cout << n2;
+    
     while(i <= numero){
         newFib = n1 + n2;                   // soma os dois nuemros anteriores
-        cout << newFib << " ";              // exibe o novo numero fibonacci
+        cout.width(15);
+        cout.left;
+        cout << newFib << "";              // exibe o novo numero fibonacci
 
         coluna++;                           // variavel das colunas é incrementada (para formatação)
         if(coluna % 6 == 0){cout << endl;}  // verifica se a coluna é divisivel por 6, se sim, da um enter para nova linha
